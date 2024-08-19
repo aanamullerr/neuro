@@ -1,0 +1,33 @@
+create database neurosolution;
+use neurosolution;
+
+create table cadastro(
+	id int auto_increment primary key,
+    nome varchar(255) not null,
+	sobrenome varchar(255) not null,
+    data date not null,
+    email varchar(255) not null,
+    senha varchar(255) not null
+    );
+    
+create table form(
+	form_id int auto_increment primary key,
+	nome varchar(255) not null,
+    numero varchar(11) not null,
+    email varchar(255) not null,
+    diagnostico boolean not null
+);
+
+create table profissional(
+	id int auto_increment primary key,
+    nome varchar(255),
+    numero varchar(255),
+    email varchar(255),
+    descricao varchar(255)
+);
+
+insert into profissional (nome,numero,email,descricao) values (
+	"ANA","9999999999","a@a.com", "teste"
+);
+
+select * from profissional;
